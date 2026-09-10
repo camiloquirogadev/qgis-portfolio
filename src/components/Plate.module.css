@@ -1,0 +1,35 @@
+.plate {
+  margin: clamp(34px, 6vw, 72px) 0;
+  scroll-margin-top: 24px;
+}
+
+/* el "Lámina 01 · tema ———— Unidad N" */
+.index {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.index b { color: var(--accent); font-weight: 600; }
+.rule { flex: 1; height: 1px; background: var(--line); align-self: center; }
+
+/* mapa + rótulo; .flip da vuelta el lado */
+.layout {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+}
+.layout.flip { grid-template-columns: 1fr 1.55fr; }
+.layout.flip > :first-child { order: 2; }   /* mapa → derecha */
+.layout.flip > :last-child  { order: 1; }   /* rótulo → izquierda */
+
+@media (max-width: 720px) {
+  .layout, .layout.flip { grid-template-columns: 1fr; }
+  .layout > * { order: 0 !important; }        /* siempre mapa arriba, rótulo abajo */
+}

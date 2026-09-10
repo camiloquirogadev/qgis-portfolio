@@ -1,0 +1,22 @@
+# dependencias / build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SO / editores
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# temporales
+*.tmp

@@ -1,0 +1,44 @@
+/* colores, fuentes y medidas. cambio todo desde acá */
+/* arranca en claro; más abajo el oscuro (auto del sistema y el del botón) */
+:root {
+  /* fondos */
+  --bg: #E7EBED;  --surface: #FBFCFB;  --surface-2: #F1F4F5;
+  /* textos */
+  --ink: #14232E;  --ink-soft: #4C5D68;  --ink-faint: #7C8B94;
+  /* líneas */
+  --line: #CBD4D9;  --line-strong: #A9B6BD;
+  /* acento (teal) */
+  --accent: #0E7C86;  --accent-deep: #0A5A62;  --accent-tint: #DDEBEC;
+  /* marco fino de la carta */
+  --neat: #38505C;
+  --shadow: 0 1px 2px rgba(20,35,46,.05), 0 10px 30px -14px rgba(20,35,46,.22);
+
+  /* fuentes */
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans: "Overpass", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Overpass Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --maxw: 1080px;
+}
+
+/* oscuro del sistema (si no forcé el claro con el botón) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1418;  --surface: #141E24;  --surface-2: #101a1f;
+    --ink: #E9EEF0;  --ink-soft: #9EADB6;  --ink-faint: #6D7E88;
+    --line: #243139;  --line-strong: #31424b;
+    --accent: #2BA7B1;  --accent-deep: #1d8b95;  --accent-tint: #123034;
+    --neat: #5A7783;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 40px -18px rgba(0,0,0,.7);
+  }
+}
+
+/* oscuro forzado por el botón */
+:root[data-theme="dark"] {
+  --bg: #0D1418;  --surface: #141E24;  --surface-2: #101a1f;
+  --ink: #E9EEF0;  --ink-soft: #9EADB6;  --ink-faint: #6D7E88;
+  --line: #243139;  --line-strong: #31424b;
+  --accent: #2BA7B1;  --accent-deep: #1d8b95;  --accent-tint: #123034;
+  --neat: #5A7783;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 40px -18px rgba(0,0,0,.7);
+}

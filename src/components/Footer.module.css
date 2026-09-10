@@ -1,0 +1,18 @@
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 30px 0 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: center;
+  justify-content: space-between;
+}
+.col {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.col b { color: var(--ink-soft); font-weight: 500; }

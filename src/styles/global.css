@@ -1,0 +1,44 @@
+/* reset + base del body */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  letter-spacing: .005em;
+  /* grilla de fondo tipo papel milimetrado */
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 34px 34px, 34px 34px;
+  background-position: -1px -1px;
+}
+
+img { max-width: 100%; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4vw, 40px);
+}
+
+/* entrada al cargar. le pongo class="rise" y un animationDelay a cada bloque */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: riseIn .8s cubic-bezier(.2,.7,.2,1) both; }
+}
+
+/* si el sistema pide menos movimiento, corto todo */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+    animation: none !important;
+  }
+}

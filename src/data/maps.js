@@ -1,0 +1,54 @@
+// los mapas. para sumar uno: importo la imagen y agrego otro objeto
+import atlantico from '../assets/atlantico.jpg'
+import moreno from '../assets/moreno.jpg'
+import perfil from '../assets/perfil.jpg'
+
+export const maps = [
+  {
+    id: 'p1',
+    index: 'Lámina 01',
+    eyebrow: 'Batimetría · Océano Atlántico Sur',
+    unit: 'Unidad 2',
+    img: atlantico,
+    alt: 'Mapa de batimetría y altitud del Atlántico Sur entre Brasil y África, con rampa de color magma del fondo marino, puntos de grupos de interés en Maceió y Luanda, y un perfil topográfico del transecto.',
+    title: 'Batimetría del Atlántico Sur',
+    sub: 'Perfil topográfico Maceió → Luanda',
+    desc: 'Modelo digital del terreno del fondo oceánico entre Sudamérica y África, con rampa de color por altitud y un perfil batimétrico del transecto que cruza la dorsal mesoatlántica.',
+    caption: 'Batimetría del Atlántico Sur — perfil topográfico Maceió–Luanda · Camilo Quiroga, 07/09/2026',
+    specs: [
+      { k: 'Zona', v: 'Atlántico Sur' },
+      { k: 'SRC', v: 'Geográficas · lat/long' },
+      { k: 'Altitud', v: '+8.424 / −415 m' },
+      { k: 'Autor', v: 'Camilo Quiroga' },
+      { k: 'Fecha', v: '07 · 09 · 2026' },
+    ],
+    tags: ['MDE / batimetría', 'rampa magma', 'perfil de terreno'],
+    inset: {
+      img: perfil,
+      alt: 'Perfil topográfico del transecto Maceió a Luanda: la profundidad baja hasta cerca de -6000 m y sube en la dorsal central.',
+      label: 'Detalle · Perfil batimétrico',
+      text: 'El corte Maceió–Luanda: plataforma, llanura abisal y el ascenso de la dorsal mesoatlántica hacia el centro.',
+    },
+  },
+  {
+    id: 'p2',
+    index: 'Lámina 02',
+    eyebrow: 'Mapa temático · Partido de Moreno',
+    unit: 'Unidad 8',
+    img: moreno,
+    alt: 'Mapa temático del Partido de Moreno y el noroeste del AMBA, con el partido resaltado en amarillo, hidrografía, red vial nacional y provincial, y símbolos de estudiantes de TUSIGyT por localidad.',
+    title: 'Estudiantes de TUSIGyT en Moreno',
+    sub: 'Mapa temático del noroeste del AMBA',
+    desc: 'El partido de Moreno en su contexto metropolitano: hidrografía, red vial jerarquizada y símbolos proporcionales con la cantidad de estudiantes de la tecnicatura por localidad.',
+    caption: 'Estudiantes de TUSIGyT del Partido de Moreno · Camilo Sol Quiroga, 24/07/2026 · EPSG:5347 POSGAR 2007 / Argentina Faja 5',
+    specs: [
+      { k: 'Zona', v: 'Moreno · Bs. As.' },
+      { k: 'SRC', v: 'EPSG:5347' },
+      { k: 'Proyección', v: 'POSGAR 07 · Faja 5' },
+      { k: 'Fuente', v: 'SIG I · IGN Arg.' },
+      { k: 'Fecha', v: '24 · 07 · 2026' },
+    ],
+    tags: ['mapa temático', 'hidrografía', 'red vial', 'símbolos proporcionales'],
+    inset: null,
+  },
+]
