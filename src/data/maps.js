@@ -1,5 +1,7 @@
 // los mapas. para sumar uno: importo la imagen y agrego otro objeto
 import atlantico from '../assets/atlantico.jpg'
+import precipitacion from '../assets/precipitacion.png'
+import temperatura from '../assets/temperatura.png'
 import moreno from '../assets/moreno.jpg'
 import perfil from '../assets/perfil.jpg'
 
@@ -33,6 +35,48 @@ export const maps = [
   {
     id: 'p2',
     index: 'Lámina 02',
+    eyebrow: 'Coropletas · Precipitación (BIO12) · Argentina',
+    unit: 'Unidad 3',
+    img: precipitacion,
+    alt: 'Mapa de coropletas de la precipitación media anual (variable bioclimática BIO12) por provincia de Argentina, con escala de azules del más seco al más húmedo, rótulos de provincias y caja de interpretación.',
+    title: 'Precipitación media anual por provincia',
+    sub: 'Variable bioclimática BIO12 — WorldClim v2.1',
+    desc: 'Coropletas de precipitación media anual por provincia a partir de WorldClim v2.1. El gradiente cae de este a oeste y de norte a sur: la Mesopotamia supera los 1.000 mm mientras Cuyo apenas ronda los 200 mm.',
+    caption: 'Precipitación media anual (BIO12) por provincia — Argentina · Camilo Quiroga, 09/2026 · EPSG:4326 WGS 84',
+    specs: [
+      { k: 'Zona', v: 'Argentina' },
+      { k: 'SRC', v: 'EPSG:4326 · WGS 84' },
+      { k: 'Variable', v: 'BIO12 (mm/año)' },
+      { k: 'Fuente', v: 'WorldClim v2.1 · IGN' },
+      { k: 'Fecha', v: '09 · 2026' },
+    ],
+    tags: ['coropletas', 'bioclimática', 'WorldClim v2.1', 'base ArgenMap'],
+    inset: null,
+  },
+  {
+    id: 'p3',
+    index: 'Lámina 03',
+    eyebrow: 'Interpolación · Temperatura · Misiones',
+    unit: 'Unidad 4',
+    img: temperatura,
+    alt: 'Superficie continua de temperatura media mensual interpolada por IDW sobre la provincia de Misiones, con rampa viridis del más frío al más cálido, estaciones meteorológicas y recorte al límite provincial.',
+    title: 'Temperatura media interpolada (IDW)',
+    sub: 'Interpolación desde estaciones — Septiembre 2021',
+    desc: 'Superficie continua de temperatura media mensual generada por interpolación IDW (potencia 2) a partir de estaciones meteorológicas y recortada al límite de Misiones, mostrando el gradiente térmico noroeste–sureste.',
+    caption: 'Temperatura media mensual interpolada (IDW) — Misiones, septiembre 2021 · Camilo Quiroga, 21/09/2026 · EPSG:4326 WGS 84',
+    specs: [
+      { k: 'Zona', v: 'Misiones' },
+      { k: 'SRC', v: 'EPSG:4326 · WGS 84' },
+      { k: 'Método', v: 'IDW · potencia 2' },
+      { k: 'Rango', v: '≤ 20,2 / > 22,6 °C' },
+      { k: 'Fecha', v: '21 · 09 · 2026' },
+    ],
+    tags: ['interpolación IDW', 'raster continuo', 'estaciones', 'rampa viridis'],
+    inset: null,
+  },
+  {
+    id: 'p4',
+    index: 'Lámina 04',
     eyebrow: 'Mapa temático · Partido de Moreno',
     unit: 'Unidad 8',
     img: moreno,
