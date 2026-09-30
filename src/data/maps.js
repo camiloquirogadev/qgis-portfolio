@@ -2,6 +2,7 @@
 import atlantico from '../assets/atlantico.jpg'
 import precipitacion from '../assets/precipitacion.png'
 import temperatura from '../assets/temperatura.png'
+import fragmentacion from '../assets/fragmentacion.png'
 import moreno from '../assets/moreno.jpg'
 import perfil from '../assets/perfil.jpg'
 
@@ -77,6 +78,27 @@ export const maps = [
   {
     id: 'p4',
     index: 'Lámina 04',
+    eyebrow: 'Teledetección · Fragmentación del monte · Sgo. del Estero',
+    unit: 'Unidad 5',
+    img: fragmentacion,
+    alt: 'Comparación multitemporal del Departamento General Taboada en Santiago del Estero: dos paneles, 1985 y 2024, con la vegetación nativa en verde y otras coberturas en marrón, mostrando cómo el monte se fragmenta en parches cada vez más chicos y aislados.',
+    title: 'Fragmentación de la vegetación nativa',
+    sub: 'General Taboada · 1985 → 2024',
+    desc: 'Análisis multitemporal de la pérdida de monte nativo en el Depto. General Taboada a partir de MapBiomas. Con métricas de paisaje (LecoS): entre 1985 y 2024 los parches se multiplicaron por 4,4 (+336 %) y su área media cayó un 92 %, dejando remanentes pequeños y aislados.',
+    caption: 'Fragmentación de la vegetación nativa — Depto. General Taboada (Santiago del Estero), 1985–2024 · Camilo Quiroga, 28/09/2026 · EPSG:5346 POSGAR 2007 / Faja 4',
+    specs: [
+      { k: 'Zona', v: 'Gral. Taboada · Sgo. del Estero' },
+      { k: 'SRC', v: 'EPSG:5346' },
+      { k: 'Proyección', v: 'POSGAR 07 · Faja 4' },
+      { k: 'Fuente', v: 'MapBiomas Argentina' },
+      { k: 'Fecha', v: '28 · 09 · 2026' },
+    ],
+    tags: ['teledetección', 'multitemporal', 'métricas LecoS', 'MapBiomas'],
+    inset: null,
+  },
+  {
+    id: 'p5',
+    index: 'Lámina 05',
     eyebrow: 'Mapa temático · Partido de Moreno',
     unit: 'Unidad 8',
     img: moreno,
